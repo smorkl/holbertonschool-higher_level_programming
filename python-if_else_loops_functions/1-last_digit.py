@@ -2,10 +2,11 @@
 import random
 
 number = random.randint(-10000, 10000)
+number2 = number 
 if number < 0:
-    number = number * -1
+    number2 = number * -1
 
-last_digit = number % 10
+last_digit = number2 % 10
 
 if last_digit > 5:
     # If the number is greater than 5
