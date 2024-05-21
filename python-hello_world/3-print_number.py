@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 number = 98
-print("%s Battery street" % (number))
+texto = "Battery street"
+print(f"{number} {texto}")
