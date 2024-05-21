@@ -2,7 +2,7 @@
 import random
 
 number = random.randint(-10000, 10000)
-number2 = number 
+
 if number < 0:
     number2 = number * -1
 
