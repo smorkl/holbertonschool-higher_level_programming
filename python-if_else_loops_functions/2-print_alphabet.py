@@ -1,3 +1,6 @@
 #!/usr/bin/python3
+alphabet = ""
 for letra in 'abcdefghijklmnopqrstuvwxyz':
-    print(letra, end='')
+    alphabet += letra + ""
+
+print(alphabet)
