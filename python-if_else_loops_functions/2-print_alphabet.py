@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-alphabet = ""
-for letra in 'abcdefghijklmnopqrstuvwxyz':
-    alphabet += letra + ""
-
-print(f"{alphabet}")
+for i in range(97, 123):
+    print("{}".format("".join(chr(i))), end="")
