@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-        print(str.upper())
+        texto = "{}".format(str.upper())
+        print(f"{texto}")
