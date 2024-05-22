@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def add(a, b):
-    print("{} + {}".format(a, b))
+def print_last_digit(number):
+    print("{} % 10".format(number))
