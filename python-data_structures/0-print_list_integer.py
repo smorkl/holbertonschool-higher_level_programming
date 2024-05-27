@@ -2,4 +2,4 @@
 
 def print_list_integer(my_list=[]):
     while i in len(my_list):
-        print(f"{my_list[i]}")
+        print("{}".format(my_list[i]))
