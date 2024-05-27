@@ -13,11 +13,11 @@ def print_args(args):
   if num_args == 0:
     print("0 arguments.")
   elif num_args == 1:
-    print(f"1 argument:\n 1: {args[1]}")
+    print(f"1 argument:\n1: {args[1]}")
   else:
     print(f"{num_args} arguments:")
     for i in range(1, len(args)):
-      print(f"  {i}: {args[i]}")
+      print(f"{i}: {args[i]}")
 
 if __name__ == "__main__":
   print_args(sys.argv)
