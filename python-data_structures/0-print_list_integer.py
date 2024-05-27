@@ -6,5 +6,6 @@ def print_list_integer(my_list=[]):
     Args:
         my_list (list, optional): The list of integers to print. Defaults to [].
     """
-    while i in my_list:
-        print(f"{i}")
+
+    for i in my_list:
+        print("{}".format(i))
