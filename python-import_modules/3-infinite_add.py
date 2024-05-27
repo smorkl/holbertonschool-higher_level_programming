@@ -7,12 +7,12 @@ def add_num(args):
 
     list_int = [int(x) for x in args[1:]]
     add_total = 0
-    if len(list_int) > 1:
+    if len(list_int) > 2:
         for numero in list_int:
             add_total += numero
         print(f"{add_total}")
     else:
-        print(len(args))
+        print(len(args[1:]))
 
 
 if __name__ == "__main__":
