@@ -9,9 +9,8 @@ def print_matrix_integer(matrix=[[]]):
     """
     for row in matrix:
         counter = 0
-        for element in row:
-            print("{:d}".format(element), end=" ")
-            counter += 1
+        for i, element in enumerate(row):
+            print(f"{element}", end=" " if i < len(row) - 1 else "")
             if counter == 3:
                 counter = 0
                 print()
