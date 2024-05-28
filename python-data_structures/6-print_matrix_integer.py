@@ -14,4 +14,4 @@ def print_matrix_integer(matrix=[[]]):
             counter += 1
             if counter == 3:
                 counter = 0
-                print()
+                print(f"")
