@@ -17,5 +17,5 @@ def uniq_add(my_list=[]):
         if num not in seen:
             seen.add(num)
             new_list.append(num)
-
-    return new_list
+    new_string = str(new_list)
+    return new_string
