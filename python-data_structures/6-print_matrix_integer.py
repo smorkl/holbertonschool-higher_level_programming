@@ -8,4 +8,5 @@ def print_matrix_integer(matrix=[[]]):
         matrix: A 2D list of integers (optional, defaults to an empty list).
     """
     for row in matrix:
-        print("{:d}".format(*row))
+        for element in matrix
+        print("{:d}".format(element))
