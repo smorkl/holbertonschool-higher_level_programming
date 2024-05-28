@@ -10,8 +10,8 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         counter = 0
         for element in row:
-            print("{}".format(element), end=" ")
+            print(f"{element} ", end="")
             counter += 1
             if counter == 3:
                 counter = 0
-                print(f"")
+                print()
