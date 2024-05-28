@@ -11,8 +11,10 @@ def divisible_by_2(my_list=[]):
         A new list containing elements from the input list
         that are divisible by 2.
     """
-    list = []
+    list_divisible = []
     for num in my_list:
         if num % 2 == 0:
-            list.append(num)
-    return list
+            list_divisible.append(True)
+        else:
+            list_divisible.append(False)
+    return list_divisible
