@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def multiplicar_por_2(a_diccionario):
+def multiply_by_2(a_dictionary):
     """
     Creates a new dictionary with values doubled from the original dictionary.
 
