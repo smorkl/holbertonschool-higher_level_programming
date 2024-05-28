@@ -3,8 +3,8 @@
 def multiple_returns(sentence):
     tupla = ()
     if len(sentence) < 0:
-        tupla = ("None")
+        tupla = ("None",)
         return tupla
-    else:
-        tupla = (len(sentence), sentence(0))
-        return tupla
+    
+    tupla = (len(sentence), sentence[0])
+    return tupla
