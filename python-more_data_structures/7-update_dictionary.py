@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def update_dictionary(a_dictionary, key, value):
-    """Actualiza el valor de una clave en un diccionario, agregándola si no existe.
+    """
+    Actualiza el valor de una clave en un diccionario,
+    agregándola si no existe.
 
     Args:
         a_dictionary (dict): El diccionario a actualizar.
