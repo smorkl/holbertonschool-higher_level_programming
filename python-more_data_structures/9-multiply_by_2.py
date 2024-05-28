@@ -10,9 +10,7 @@ def multiplicar_por_2(a_diccionario):
     Returns:
         dict: A new dictionary with values multiplied by 2.
     """
-    new_a_diccionario = a_diccionario
-
-    for key in new_a_diccionario:
-        value = new_a_diccionario[key]
-        new_a_diccionario[key] = value * 2
-    return new_a_diccionario
+    new_diccionario = a_diccionario.copy()
+    for key, value in new_diccionario.items():
+        new_diccionario[key] = value * 2
+    return new_diccionario
