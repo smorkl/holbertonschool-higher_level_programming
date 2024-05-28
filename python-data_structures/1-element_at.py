@@ -12,6 +12,6 @@ def element_at(my_list, idx):
         if the index is out of bounds.
     """
     if idx < 0 or idx >= len(my_list):
-        return "none"
+        return "None"
     else:
         return my_list[idx]
