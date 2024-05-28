@@ -2,14 +2,15 @@
 
 def divisible_by_2(my_list=[]):
     """
-    Finds elements in a list that are divisible by 2 (even numbers).
+    Finds all multiples of 2 within a given list.
 
     Args:
-        my_list: An optional list of numbers (defaults to an empty list).
+        my_list: An input list of integers.
 
     Returns:
-        A new list containing elements from the input list
-        that are divisible by 2.
+        A new list of Boolean values (True if the corresponding
+        element in the input list is a multiple of 2, False otherwise).
+        The new list has the same size as the original list.
     """
     list_divisible = []
     for num in my_list:
