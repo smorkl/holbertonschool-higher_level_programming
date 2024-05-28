@@ -14,7 +14,7 @@ def print_matrix_integer(matrix=[[]]):
         for i, element in enumerate(row):
             if i < len(row) - 1:
                 print("{:d}".format(element), end=" ")
-            else: 
+            else:
                 print("{:d}".format(element), end="\n")
             if counter == 3:
                 counter = 0
