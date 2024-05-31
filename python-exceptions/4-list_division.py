@@ -9,4 +9,6 @@ def list_division(my_list_1, my_list_2, list_length):
             my_division.append(result)
     except ZeroDivisionError:
         return None
+    finally:
+        return None
     return my_division
