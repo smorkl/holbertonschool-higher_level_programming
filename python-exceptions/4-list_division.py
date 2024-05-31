@@ -2,13 +2,22 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     my_division = []
-    shorter_list = min(len(my_list_1), len(my_list_2))
     try:
-        for i, ii in zip(my_list_1[:shorter_list], my_list_2[:shorter_list]):
+        for i, ii in zip(my_list_1[:list_length], my_list_2[:list_length]):
             result = i / ii
             my_division.append(result)
     except ZeroDivisionError:
-        return None
+        my_division.append(0)
+        print("division by 0")
+        continue
+    except TypeError:
+        my_division.append(0)
+        print("wrong type")
+        continue
+    except IndexError:
+        my_division.append(0)
+        print("out of range")
+        continue
     finally:
-        return None
+        pass
     return my_division
