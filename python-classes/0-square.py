@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""
-This class represents a square
+"""Square Class
 
-this momento not have nothig
+This class represents a square emmpty
+
 """
 
 
 class square:
     """
     class enmpty
+
+    create firt class
+
     """
     pass
