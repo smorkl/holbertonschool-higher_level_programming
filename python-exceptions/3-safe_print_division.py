@@ -4,6 +4,6 @@ def safe_print_division(a, b):
     try:
         resultado = a / b
     
-    except:
+    except (TypeError, ValueError):
         pass
     return resultado
