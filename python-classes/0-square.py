@@ -18,4 +18,6 @@ class Square:
         When creating a Square object, this method is automatically called
         and prints the string representation of the square (`{}`).
         """
-        print("{\}")  # Prints a simple representation of a square
+        a = '{'
+        b = '}'
+        print("{}{}".format(a, b))
