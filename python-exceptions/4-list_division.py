@@ -9,12 +9,15 @@ def list_division(my_list_1, my_list_2, list_length):
     except ZeroDivisionError:
         my_division.append(0)  # Replace None with 0 for better behavior
         print("division by 0")
+        pass
     except TypeError:
         my_division.append(0)  # Replace None with 0 for better behavior
         print("wrong type")
+        pass
     except IndexError:
         my_division.append(0)  # Replace None with 0 for better behavior
         print("out of range")
+        pass
     finally:
         pass  # Add cleanup actions if needed
     return my_division
