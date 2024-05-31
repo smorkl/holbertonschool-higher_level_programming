@@ -6,4 +6,4 @@ def raise_exception():
         for i in list:
             print("{}".format(list(i)))
     except TypeError:
-        return TypeError
+        print("Exception has been raised")
