@@ -5,5 +5,5 @@ def safe_print_division(a, b):
         resultado = a / b
     
     except (TypeError, ValueError):
-        pass
+        return None
     return resultado
