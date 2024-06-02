@@ -6,12 +6,8 @@ square class
 """
 
 
-class square:
-    """square class
-
-    methods for manipulation
-
-    """
+class Square:
+    """Square class representation with methods for area calculation."""
 
     def __init__(self, size=0):
         """
@@ -24,10 +20,18 @@ class square:
             TypeError: If the provided size is not an integer.
             ValueError: If the provided size is less than zero.
         """
-        if type(size) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+        self.__size = size
+
+    @property
+    def size(self):
+        """
+        Returns the size of the square.
+        """
+        return self.__size
 
     def area(self):
         """
@@ -36,4 +40,4 @@ class square:
         Returns:
             float: The calculated area of the square.
         """
-        return self.__size ** 2
+        return self.size ** 2  # Use the property for accessing size
