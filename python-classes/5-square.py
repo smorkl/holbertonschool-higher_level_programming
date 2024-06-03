@@ -72,9 +72,11 @@ class Square:
         Prints a square matrix of '#' characters with a size based on
         the object's size attribute.
         """
-        char = '#'
-        for row in range(self.size):
-            for colum in range(self.size):
-                print(char, end="")
+        if self.size != '0':
+            char = '#'
+            for row in range(self.size):
+                for colum in range(self.size):
+                    print(char, end="")
+                print()
+        else:
             print()
-        print()
