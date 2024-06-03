@@ -1,5 +1,16 @@
+#!/usr/bin/python3
+"""Square Class
+
+square class
+
+"""
+
+
 class Square:
-    """Square class representation with methods for area calculation and size manipulation."""
+    """
+    Square class representation with methods for
+    area calculation and size manipulation.
+    """
 
     def __init__(self, size=0):
         """
@@ -38,6 +49,7 @@ class Square:
 
         Raises:
             ValueError: If the provided size is less than zero.
+            TypeError: If the provided size is different to int
         """
         try:
             if new_size < 0:
@@ -45,6 +57,7 @@ class Square:
             self._size = new_size
         except TypeError:
             raise TypeError("size must be an integer")
+
     def area(self):
         """
         Calculates the area of the square.
@@ -54,15 +67,13 @@ class Square:
         """
         return self.size ** 2  # Use the property to access the size
 
-
-my_square = Square(89)
-print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-
-my_square.size = 3
-print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-
-try:
-    my_square.size = "5 feet"
-    print("Area: {} for size: {}".format(my_square.area(), my_square.size))
-except Exception as e:
-    print(e)
+    def my_print(self):
+        """
+        Prints a square matrix of '#' characters with a size based on
+        the object's size attribute.
+        """
+        char = '#'
+        for row in range(self.size):
+            for colum in range(self.size):
+                print(char, end="")
+            print()
