@@ -76,5 +76,4 @@ class Square:
         for row in range(self.size):
             for colum in range(self.size):
                 print(char, end="")
-            print()
         print()
