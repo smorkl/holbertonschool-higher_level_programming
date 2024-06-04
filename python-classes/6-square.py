@@ -29,14 +29,8 @@ class Square:
             raise ValueError("size must be >= 0")
         self._size = size  # Private attribute to store the square's size
 
-        if not isinstance(position, tuple):
-            raise TypeError("position must be a tuple")
-        if len(position) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(element, int) for element in position):
-            raise ValueError("all elements in position must be integers")
         self._position = position  # Use a different attribute name
-
+    
     @property
     def size(self):
         """
@@ -66,12 +60,43 @@ class Square:
         except TypeError:
             raise TypeError("size must be an integer")
 
+    
+    @property
+    def position(self):
+        """
+        Gets the current size of the square.
+
+        Returns:
+            int: The size of the square.
+        """
+        return self._position
+
+    @size.setter
+    def position(self, new_position):
+        """
+        Sets the position of the square.
+
+        Args:
+            new_position (tupla): The new tupla to set.
+
+        Raises:
+            TypeError: If the provided is to tupla
+            TypeError: if the tupla provided is to must of 2 number
+            ValueError: if the elements that the tuple has are positive
+        """
+        if not isinstance(self._position, tuple):
+            raise TypeError("position must be a tuple")
+        if len(self.position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(isinstance(element, int) for element in new_position):
+            raise ValueError("all elements in position must be integers")
+
     def area(self):
         """
         Calculates the area of the square.
 
         Returns:
-            int: The calculated area of the square.
+            float: The calculated area of the square.
         """
         return self.size ** 2  # Use the property to access the size
 
@@ -79,12 +104,6 @@ class Square:
         """
         Prints a square matrix of '#' characters with a size based on
         the object's size attribute.
-
-        This function attempts to print a square using '#' characters,
-        considering the object's `_position` attribute
-        (a tuple of two integers).
-
-        However, there's a potential issue with the current implementation.
         """
         if self.size == 0:
             print()
