@@ -29,7 +29,13 @@ class Square:
             raise ValueError("size must be >= 0")
         self._size = size  # Private attribute to store the square's size
 
-        self._position = position  # Use a different attribute name
+        if not isinstance(self._position, tuple):
+            raise TypeError("position must be a tuple")
+        if len(self.position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(isinstance(element, int) for element in new_position):
+            raise ValueError("all elements in position must be integers")
+        self._position = new_position
     
     @property
     def size(self):
