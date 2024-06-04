@@ -114,11 +114,14 @@ class Square:
         else:
             char = '#'
             for row in range(self.size):
-                if self._position[0] > 0 and self._position[1] > 0:
+                if self._position[0] > 0:
                     cout = self._position[0]
                     i = 0
                     while i < cout:
-                        print("_", end="")
+                        if self._position[1] > 0:
+                            print("_", end="")
+                        else:
+                            print(" ", end="")
                         i += 1
                 for colum in range(self.size):
                     print(char, end="")
