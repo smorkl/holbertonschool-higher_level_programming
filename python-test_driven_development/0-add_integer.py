@@ -3,6 +3,7 @@
     add two number
 """
 
+
 def add_integer(a, b=98):
     """Adds two integers together.
 
@@ -21,13 +22,13 @@ def add_integer(a, b=98):
 
     if not (isinstance(b, int) or isinstance(b, float)):
         raise TypeError("b must be an integer")
-    
+
     if a > 1000000 or (a == float('inf') or a == float('-inf')):
         raise OverflowError("cannot convert float infinity to integer")
 
     if b > 1000000 or (b == float('inf') or b == float('-inf')):
         raise OverflowError("cannot convert float infinity to integer")
-    
+
     else:
         a = round(int(a))
         b = round(int(b))
