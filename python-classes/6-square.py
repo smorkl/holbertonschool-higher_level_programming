@@ -120,7 +120,7 @@ class Square:
                     cout = self._position[0]
                     i = 0
                     while i < cout:
-                        if self._position[1] > 0:
+                        if self._position[1] < 0:
                             print("_", end="")
                         else:
                             print(" ", end="")
