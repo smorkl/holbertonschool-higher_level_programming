@@ -128,4 +128,5 @@ class Square:
                 if self._position[1] < 0: 
                     print("$")
                 print()
-            print()
+            if self._position[1] > 0:
+                print()
