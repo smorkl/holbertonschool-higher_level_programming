@@ -112,6 +112,8 @@ class Square:
         if self.size == 0:
             print()
         else:
+            if self._position[1] > 0:
+                print()
             char = '#'
             for row in range(self.size):
                 if self._position[0] > 0:
@@ -127,6 +129,5 @@ class Square:
                     print(char, end="")
                 if self._position[1] < 0: 
                     print("$")
-                print()
-            if self._position[1] > 0:
-                print()
+                else:
+                    print()
