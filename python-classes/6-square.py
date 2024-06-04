@@ -29,15 +29,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self._size = size  # Private attribute to store the square's size
 
-        if not isinstance(position, tuple):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if len(position) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if position[0] < 0:
-            raise ValueError("position must be a tuple of 2 positive integers")    
-        elif position[1] < 0:
-            raise ValueError("position must be a tuple of 2 positive integers")
-        self._position = position  # Use a different attribute name
+        if (isinstance(position, tuple) and len(position)) == 2 and isinstance(position[1], int) and isinstance(position[0], int) and position[0] >= 0 and position[1] >= 0:
+            self._position = position 
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")  
     
     @property
     def size(self):
@@ -127,3 +122,5 @@ class Square:
                 for colum in range(self.size):
                     print(char, end="")
                 print("$")
+
+my_square = Square(3, (1, "3"))
