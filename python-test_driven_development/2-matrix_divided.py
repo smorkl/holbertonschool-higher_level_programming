@@ -20,9 +20,10 @@ def matrix_divided(matrix, div):
         TypeError: If div is zero or of an invalid type.
     """
 
-    if not isinstance(div, (int, float)) or div == 0:
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a non-zero integer or float")
-
+    if div == 0:
+        raise TypeError("division by zero")
     new_matrix = []
     first_row_length = len(matrix[0])  # Store length of the first row
 
