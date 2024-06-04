@@ -121,4 +121,7 @@ class Square:
                     i += 1
                 for colum in range(self.size):
                     print(char, end="")
-                print("$")
+                if self._position[1] < 0: 
+                    print("$")
+                else:
+                    print()
