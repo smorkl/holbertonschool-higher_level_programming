@@ -135,6 +135,3 @@ class Square:
                     print("$")
                 else:
                     print()
-
-mysquare = Square(5, (3, 2))
-mysquare.my_print()
