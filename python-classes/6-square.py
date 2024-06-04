@@ -31,6 +31,8 @@ class Square:
 
         if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
+        if len(self.position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         self._position = position  # Use a different attribute name
     
     @property
@@ -89,7 +91,7 @@ class Square:
         if not isinstance(self._position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(self.position) != 2:
-            raise TypeError("positi")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if not all(isinstance(element, int) for element in new_position):
             raise ValueError("all elements in position must be integers")
         self._position = new_position
