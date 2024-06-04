@@ -33,8 +33,10 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(element, int) for element in position):
+        if position[0] < 0:
             raise ValueError("position must be a tuple of 2 positive integers")    
+        elif position[1] < 0:
+            raise ValueError("position must be a tuple of 2 positive integers")
         self._position = position  # Use a different attribute name
     
     @property
@@ -125,3 +127,5 @@ class Square:
                 for colum in range(self.size):
                     print(char, end="")
                 print("$")
+
+my_square = Square(3, (1, -3))
