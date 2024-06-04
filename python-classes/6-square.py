@@ -113,7 +113,11 @@ class Square:
             print()
         else:
             if self._position[1] > 0:
-                print()
+                count2 = self._position[1]
+                rep = 0
+                while rep < count2:
+                    print()
+                    rep += 1
             char = '#'
             for row in range(self.size):
                 if self._position[0] > 0:
@@ -131,3 +135,6 @@ class Square:
                     print("$")
                 else:
                     print()
+
+mysquare = Square(5, (3, 2))
+mysquare.my_print()
