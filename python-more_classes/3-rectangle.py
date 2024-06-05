@@ -133,3 +133,9 @@ class Rectangle:
                     return output
                 else:
                     output += "\n"
+
+    def __repr__(self):
+        """
+        Return the width and the height of the rectangle
+        """
+        return (f"Rectangle({self.width}, {self.height})")
