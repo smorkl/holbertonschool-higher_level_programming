@@ -125,7 +125,7 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return output
         else:
-            char = self.print_symbol
+            char = str(self.print_symbol)
             count = 0
             for h in range(self.height):
                 for w in range(self.width):
