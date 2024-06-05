@@ -21,8 +21,9 @@ class Rectangle:
         TypeError: If the width is not an integer.
     """
     number_of_instances = 0
-
-    def __init__(self, width=0, height=0, print_symbol=""):
+    print_symbol="#"
+    
+    def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle object.
 
@@ -53,8 +54,7 @@ class Rectangle:
         except TypeError:
             raise TypeError("width must be an integer")
         Rectangle.number_of_instances += 1
-        self.print_symbol = print_symbol
-    
+
     @property
     def width(self):
         """
