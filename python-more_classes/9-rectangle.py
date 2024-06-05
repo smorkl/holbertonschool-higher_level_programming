@@ -42,17 +42,17 @@ class Rectangle:
             TypeError: If either width or height is not an integer.
         """
         try:
-            if height < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = height
-        except TypeError:
-            raise TypeError("height must be an integer")
-        try:
             if width < 0:
                 raise ValueError("width must be >= 0")
             self.__width = width
         except TypeError:
             raise TypeError("width must be an integer")
+        try:
+            if height < 0:
+                raise ValueError("height must be >= 0")
+            self.__height = height
+        except TypeError:
+            raise TypeError("height must be an integer")
         Rectangle.number_of_instances += 1
 
     @property
@@ -178,3 +178,9 @@ class Rectangle:
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+try:
+    my_square = Rectangle.square(-2)
+    print("{} / {}".format(my_square.width, my_square.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
