@@ -20,7 +20,6 @@ class Rectangle:
         ValueError: If the width is less than zero.
         TypeError: If the width is not an integer.
     """
-
     def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle object.
@@ -39,6 +38,7 @@ class Rectangle:
             ValueError: If either width or height is less than zero.
             TypeError: If either width or height is not an integer.
         """
+
         try:
             if height < 0:
                 raise ValueError("height must be >= 0")
