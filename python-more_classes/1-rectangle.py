@@ -42,23 +42,23 @@ class Rectangle:
         try:
             if height < 0:
                 raise ValueError("height must be >= 0")
-            self._height = height
+            self.__height = height
         except TypeError:
             raise TypeError("height must be an integer")
         try:
             if width < 0:
                 raise ValueError("width must be >= 0")
-            self._width = width
+            self.__width = width
         except TypeError:
             raise TypeError("width must be an integer")
 
-    def get_width(self):
+    def width(self):
         """
         return the valor of width
         """
-        return self._width
+        return self.__width
 
-    def set_width(self, value):
+    def width(self, value):
         """
         In this function we handle two kinds
         of errors if width is less than 0 and if width is not an integer
@@ -66,17 +66,17 @@ class Rectangle:
         try:
             if value < 0:
                 raise ValueError("width must be >= 0")
-            self._width = value
+            self.__width = value
         except TypeError:
             raise TypeError("width must be an integer")
 
-    def get_height(self):
+    def height(self):
         """
         return the valor of return height
         """
-        return self._height
+        return self.__height
 
-    def set_height(self, value):
+    def height(self, value):
         """
         In this function we handle two kinds
         of errors if height is less than 0 and if height is not an integer
@@ -84,6 +84,6 @@ class Rectangle:
         try:
             if value < 0:
                 raise ValueError("height must be >= 0")
-            self._height = value
+            self.__height = value
         except TypeError:
             raise TypeError("height must be an integer")
