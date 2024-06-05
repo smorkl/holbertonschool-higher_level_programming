@@ -124,5 +124,8 @@ class Rectangle:
             for w in range(self.width):
                 output += char  # Use self.char if you have a char attribute
                 output += ""  # Add an empty string for spacing (optional)
-            output += "\n"  # Add a newline character after each row
+            if h == range(self.height):
+                output += ""  # Add a newline character after each row
+            else:
+                output += "\n"  # Add a newline character after each row
         return output
