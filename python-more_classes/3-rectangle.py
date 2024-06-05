@@ -120,12 +120,13 @@ class Rectangle:
 
         output = ""
         char = '#'
+        count = 0
         for h in range(self.height):
             for w in range(self.width):
-                output += char  # Use self.char if you have a char attribute
+                output += char
                 output += ""  # Add an empty string for spacing (optional)
-            if h == range(self.height):
-                output += ""  # Add a newline character after each row
+            count += 1    
+            if count == self.height:
+                return output # Return output
             else:
                 output += "\n"  # Add a newline character after each row
-        return output
