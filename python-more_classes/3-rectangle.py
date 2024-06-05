@@ -115,7 +115,8 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle using the character '#'.
+        Returns a string representation of the rectangle
+        using the character '#'.
         """
         output = ""
         if self.height == 0 or self.width == 0:
@@ -126,9 +127,9 @@ class Rectangle:
             for h in range(self.height):
                 for w in range(self.width):
                     output += char
-                    output += ""  # Add an empty string for spacing (optional)
-                count += 1    
+                    output += ""
+                count += 1
                 if count == self.height:
-                    return output # Return output
+                    return output
                 else:
-                    output += "\n"  # Add a newline character after each row
+                    output += "\n"
