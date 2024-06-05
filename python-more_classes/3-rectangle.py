@@ -117,16 +117,18 @@ class Rectangle:
         """
         Returns a string representation of the rectangle using the character '#'.
         """
-
         output = ""
-        char = '#'
-        count = 0
-        for h in range(self.height):
-            for w in range(self.width):
-                output += char
-                output += ""  # Add an empty string for spacing (optional)
-            count += 1    
-            if count == self.height:
-                return output # Return output
-            else:
-                output += "\n"  # Add a newline character after each row
+        if self.height == 0 or self.width == 0:
+            return output
+        else:
+            char = '#'
+            count = 0
+            for h in range(self.height):
+                for w in range(self.width):
+                    output += char
+                    output += ""  # Add an empty string for spacing (optional)
+                count += 1    
+                if count == self.height:
+                    return output # Return output
+                else:
+                    output += "\n"  # Add a newline character after each row
