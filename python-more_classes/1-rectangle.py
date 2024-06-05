@@ -52,12 +52,14 @@ class Rectangle:
         except TypeError:
             raise TypeError("width must be an integer")
 
+    @property
     def width(self):
         """
         return the valor of width
         """
         return self.__width
 
+    @width.setter
     def width(self, value):
         """
         In this function we handle two kinds
@@ -70,12 +72,14 @@ class Rectangle:
         except TypeError:
             raise TypeError("width must be an integer")
 
+    @property
     def height(self):
         """
         return the valor of return height
         """
         return self.__height
 
+    @height.setter
     def height(self, value):
         """
         In this function we handle two kinds
