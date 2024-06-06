@@ -8,4 +8,5 @@ def is_same_class(obj, a_class):
     """
     if the object is an instance of the class returns true otherwise false
     """
-    print(isinstance(obj, a_class))
+    answer = (isinstance(obj, a_class))
+    return answer
