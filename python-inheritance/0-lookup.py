@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Lookup
+"""
+
 
 def lookup(obj):
     """Returns a dictionary containing the attributes and methods of an object.
