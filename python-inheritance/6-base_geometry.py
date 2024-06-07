@@ -9,5 +9,8 @@ class BaseGeometry():
     empty class BaseGeometry
     """
     def area(self):
-        raise(Exception("area() is not implemented"))
+        """
+        this fuctio returns an exception error
+        """
+        raise (Exception("area() is not implemented"))
         pass
