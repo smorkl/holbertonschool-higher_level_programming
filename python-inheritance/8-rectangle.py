@@ -2,7 +2,6 @@
 """
 Rectangle that inherits from BaseGeometry 
 """
-from base_geometry import BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
