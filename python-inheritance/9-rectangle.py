@@ -7,19 +7,19 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    Representa un rectángulo con atributos de ancho y alto.
+    Represents a rectangle with width and height attributes.
     """
     def __init__(self, width, height):
         """
-        Inicializa un objeto Rectangle.
+        Initializes a Rectangle object.
 
         Args:
-            width (int): El ancho del rectángulo.
-            height (int): La altura del rectángulo.
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
 
         Raises:
-            TypeError: Si width o height no es un entero.
-            ValueError: Si width o height no son estrictamente positivos.
+        TypeError: If width or height is not an integer.
+        ValueError: If width or height are not strictly positive.
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
