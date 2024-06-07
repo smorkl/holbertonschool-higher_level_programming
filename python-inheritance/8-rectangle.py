@@ -2,6 +2,7 @@
 """
 Rectangle that inherits from BaseGeometry 
 """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
@@ -19,7 +20,7 @@ class Rectangle(BaseGeometry):
             TypeError: Si width o height no es un entero.
             ValueError: Si width o height no son estrictamente positivos.
         """
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self._width = width
         self.height = height
-        BaseGeometry.integer_validator(width)
-        BaseGeometry.integer_validator(height)
