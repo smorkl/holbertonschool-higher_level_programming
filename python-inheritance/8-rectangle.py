@@ -5,17 +5,20 @@ Rectangle that inherits from BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    Inicializa un objeto Rectangle.
-
-    Args:
-        width (int): El ancho del rectángulo.
-        height (int): La altura del rectángulo.
-
-    Raises:
-        TypeError: Si width o height no es un entero.
-        ValueError: Si width o height no son estrictamente positivos.
+    Representa un rectángulo con atributos de ancho y alto.
     """
     def __init__(self, width, height):
+        """
+        Inicializa un objeto Rectangle.
+
+        Args:
+            width (int): El ancho del rectángulo.
+            height (int): La altura del rectángulo.
+
+        Raises:
+            TypeError: Si width o height no es un entero.
+            ValueError: Si width o height no son estrictamente positivos.
+        """
         self._width = width
         self.height = height
         BaseGeometry.integer_validator(width)
