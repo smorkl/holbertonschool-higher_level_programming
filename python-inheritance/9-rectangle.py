@@ -29,5 +29,5 @@ class Rectangle(BaseGeometry):
         return "[Square] <width>/<height>"
     
     def area(self):
-        result = (self.__width * self.__height)
+        result = (self._width * self._height)
         return result
