@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-way to inherit a list
+returns True if the object is exactly an instance of the specified class ; otherwise False
 """
 
 
