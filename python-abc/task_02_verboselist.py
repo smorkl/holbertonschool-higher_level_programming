@@ -35,9 +35,6 @@ class VerboseList(list):
 
         Args:
             item: The item of the element to be removed.
-
-        Raises:
-            itemError: If the item is not found in the list.
         """
         if item in self:
             super().remove(item)
@@ -46,3 +43,4 @@ class VerboseList(list):
     def pop(self, index=-1):
         removed_element = super().pop(index)
         print(f"Popped [{removed_element}] from the list.")
+        return removed_element
