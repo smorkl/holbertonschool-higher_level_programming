@@ -21,6 +21,8 @@ class Circle(Shape):
     """
     """
     def __init__(self, radius):
+        if radius < 0:
+            raise (AssertionError("Perimeter should handle negative radius"))
         self.radius = radius
     
     def area(self):
@@ -34,6 +36,8 @@ class Rectangle(Shape):
     """
     """
     def __init__(self, width, height):
+        if width < 0 and height < 0:
+            raise (AssertionError("Perimeter should handle negative radius"))
         self.width = width
         self.height = height
     
@@ -51,9 +55,3 @@ def shape_info(shape):
         print (f"Perimeter: {perimeter}")
     except AttributeError:
         print("El objeto no tiene métodos area o perimetro.")
-
-circle = Circle(5)
-rectangle = Rectangle(4, 7)
-
-shape_info(circle)
-shape_info(rectangle)
