@@ -21,15 +21,16 @@ class Circle(Shape):
     """
     """
     def __init__(self, radius):
-        if radius < 0:
-            raise (AssertionError("Perimeter should handle negative radius"))
         self.radius = radius
     
     def area(self):
         return (math.pi * self.radius ** 2)
     
     def perimeter(self):
-        return (2 * math.pi * self.radius)
+        perimeter = 2 * math.pi * self.radius
+        if perimeter < 0:
+            raise (AssertionError("Perimeter should handle negative radius"))
+        return perimeter
 
 
 class Rectangle(Shape):
@@ -45,7 +46,10 @@ class Rectangle(Shape):
         return (self.width * self.height)
     
     def perimeter(self):
-        return (2*(self.width + self.height))
+        perimeter = 2*(self.width + self.height)
+        if perimeter < 0:
+            raise (AssertionError("Perimeter should handle negative radius"))
+        return perimeter
 
 def shape_info(shape):
     try:
