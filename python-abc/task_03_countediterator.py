@@ -58,7 +58,8 @@ class CountedIterator():
             in the underlying iterator.
         """
         try:
-            return next(self.iter)
+            item = next(self.iter)
             self.count += 1
+            return item
         except StopIteration:
             raise StopIteration
