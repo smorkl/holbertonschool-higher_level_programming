@@ -30,7 +30,8 @@ class Circle(Shape):
         perimeter = 2 * math.pi * self.radius
         if perimeter < 0:
             raise (AssertionError("Perimeter should handle negative radius"))
-        return perimeter
+        else:
+            return perimeter
 
 
 class Rectangle(Shape):
@@ -47,8 +48,6 @@ class Rectangle(Shape):
     
     def perimeter(self):
         perimeter = 2*(self.width + self.height)
-        if perimeter < 0:
-            raise (AssertionError("Perimeter should handle negative radius"))
         return perimeter
 
 def shape_info(shape):
