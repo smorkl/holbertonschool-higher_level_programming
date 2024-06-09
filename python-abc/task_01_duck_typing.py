@@ -21,6 +21,8 @@ class Circle(Shape):
     """
     """
     def __init__(self, radius):
+        if radius < 0:
+            raise (AssertionError("Perimeter should handle negative radius"))
         self.radius = radius
     
     def area(self):
