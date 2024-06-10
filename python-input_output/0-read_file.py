@@ -15,6 +15,6 @@ def read_file(filename=""):
         str: The contents of the file as a string, or an empty
         string if the file is empty or cannot be opened.
     """
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding="utf-8") as file:
         contents = file.read()
-        return contents
+    return contents
