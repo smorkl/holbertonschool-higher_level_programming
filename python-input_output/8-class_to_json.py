@@ -22,8 +22,7 @@ def class_to_json(obj):
 
     for key, value in private_attributes.items():
         if isinstance(value, list):
-            json_dict[key] =
-            [item for item in value if _is_json_serializable(item)]
+            json_dict[key] = [item for item in value if _is_json_serializable(item)]
         elif isinstance(value, dict):
             json_dict[key] =
             {k: v for k, v in value.items() if _is_json_serializable(v)}
