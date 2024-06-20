@@ -29,7 +29,7 @@ class Student:
             dict: A dictionary containing the filtered attributes.
         """
         if not attrs == None:
-            return {attrs: getattr(self, attrs) for attrs in attr
-                    if hasattr(self, attrs)}
+            return {attrs: getattr(self, attrs) for attrs in attrs
+                     if hasattr(self, attrs)}
         
         return self.__dict__
