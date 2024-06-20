@@ -31,5 +31,5 @@ class Student:
         if isinstance(attrs, list):
             return {attrs: getattr(self, attrs) for attrs in attrs
                      if hasattr(self, attrs)}
-        
+
         return self.__dict__
