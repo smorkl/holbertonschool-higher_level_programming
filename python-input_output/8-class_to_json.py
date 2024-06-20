@@ -24,8 +24,7 @@ def class_to_json(obj):
         if isinstance(value, list):
             json_dict[key] = [item for item in value if _is_json_serializable(item)]
         elif isinstance(value, dict):
-            json_dict[key] =
-            {k: v for k, v in value.items() if _is_json_serializable(v)}
+            json_dict[key] = {k: v for k, v in value.items() if _is_json_serializable(v)}
         elif isinstance(value, (str, int, bool)):
             json_dict[key] = value
     return json_dict
