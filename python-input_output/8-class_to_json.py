@@ -16,8 +16,6 @@ def class_to_json(obj):
         attributes of the object.
     """
     attributes = vars(obj)
-
-    private_attributes = {key: value for key, value in attributes.items() if not key.startswith('_')}
     json_dict = {}
 
     for key, value in private_attributes.items():
@@ -27,6 +25,8 @@ def class_to_json(obj):
             json_dict[key] = {k: v for k, v in value.items() if _is_json_serializable(v)}
         elif isinstance(value, (str, int, bool)):
             json_dict[key] = value
+        else:
+            json_dict[key] = repr(value)    
     return json_dict
 
 
