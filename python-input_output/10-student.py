@@ -28,7 +28,7 @@ class Student:
         Returns:
             dict: A dictionary containing the filtered attributes.
         """
-        if isinstance(attrs, list)
+        if isinstance(attrs, list):
             return {attrs: getattr(self, attrs) for attrs in attr
                     if hasattr(self, attrs)}
         
