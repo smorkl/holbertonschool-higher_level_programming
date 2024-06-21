@@ -11,12 +11,12 @@ class CustomObject:
     """
     def __init__(self, name, age, is_student):
         """
-            __init__
+        Initializes a new instance of CustomObject.
 
-            args:
-                name (a string)
-                age (an integer)
-                is_student (a boolean)
+        Args:
+            name (str): The name of the object.
+            age (int): The age of the object.
+            is_students (bool): The student status of the object.
         """
         self.name = name
         self.age = age
@@ -24,11 +24,13 @@ class CustomObject:
 
     def serialize(self, filename):
         """
-            serialize the current instance of the object
-            and save it to the provided filename.
+        Serializes the current instance and saves it to a file.
 
-            args:
-                filename
+        Args:
+            filename (str): The name of the file to save the instance to.
+        
+        Returns:
+            None: Returns None if an error occurs during serialization.
         """
         try:
             with open(filename, 'wb') as file:
@@ -55,12 +57,8 @@ class CustomObject:
 
     def display(self):
         """
-            method to print out the object-s
-            attributes with the following format:
-
-            Name: John
-            Age: 25
-            Is Student: True
+        Displays the attributes of the object.
         """
-        print("Name: {}\nAge: {}\nIs Student: {}".format(
-            self.name, self.age, self.is_student))
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is_student: {self.is_student}")
