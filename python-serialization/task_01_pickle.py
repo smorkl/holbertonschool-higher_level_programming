@@ -19,8 +19,8 @@ class CustomObject:
         try:
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-        except (OSError, IOError) as e:
-            print(f"Failed to serialize object to {filename}: {e}")
+        except (EOFError, pickle.PickleError) as e:
+            print(f"Error serializing object: {e}")
             return None
 
     @classmethod
