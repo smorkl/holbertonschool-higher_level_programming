@@ -14,7 +14,7 @@ def fetch_and_print_posts():
 
     posts = response.json()
     
-    for post in post:
+    for post in posts:
         print(f"{post['title']}")
 
 def fetch_and_save_posts():
