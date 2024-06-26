@@ -1,6 +1,6 @@
--- Script to list all tables of a database
+-- Script to list all tables of a database in MySQL
 
 USE mysql;
 
---a script that lists all the tables of a database in your MySQL server.
+-- Script to list all tables of a database in your MySQL server.
 SHOW TABLES;
