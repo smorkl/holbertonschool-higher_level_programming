@@ -34,12 +34,20 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    user_to_add = request.get_json()
-    username = user_to_add.get("username")
+    """
+    Adds a new user to the internal user data store based on the POST request data.
+
+    Returns a 400 error if the username is missing or invalid.
+    Returns a 201 Created response with the added user information.
+    """
+    user_data = request.get_json()
+    username = user_data.get("username")
+    
     if not username:
         return jsonify({"error": "Username is required"}), 400
-    users[username] = user_to_add
-    return jsonify({"message": "User added", "user": user_to_add}), 201
+    users[username] = user_data
+    
+    return jsonify({"message": "User added", "user": user_data}), 201
 
 if __name__ == "__main__":
     app.run(debug=True)
