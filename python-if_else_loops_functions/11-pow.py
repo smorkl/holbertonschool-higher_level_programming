@@ -6,6 +6,7 @@ def pow(a, b):
         a = a * -1
 
     if b < 0:
+        b = b* -1
         c = 1 / a ** b
     else:
         c = a ** a
