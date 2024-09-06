@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import random
 
-num = random.randint(-10000, 10000)
+number = random.randint(-10000, 10000)
+num = number
 
 if num < 0:
     numpositive = num * -1
