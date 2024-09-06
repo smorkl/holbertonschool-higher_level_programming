@@ -7,7 +7,7 @@ def pow(a, b):
 
     if b < 0:
         c = 1 / a**b
-
-    c = a**a
+    else:
+        c = a**a
 
     return c
