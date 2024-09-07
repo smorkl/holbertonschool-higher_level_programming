@@ -7,10 +7,17 @@ def fizzbuzz():
     resultado = ""  # Inicializamos la variable resultado
     for numero in range(1, 101):
         if numero % 15 == 0:
-            resultado += "FizzBuzz "
+            print("FizzBuzz", end=" ")
         elif numero % 3 == 0:
-            resultado += "Fizz "
+            print("Fizz", end=" ")
         elif numero % 5 == 0:
-            resultado += "Buzz "
+            if numero != 100:
+                print("Buzz", end=" ")
+            else:
+                print("Buzz")        
         else:
-            resultado += str(numero) + " "
+            print(f"{numero}", end=" ")
+
+                
+
+fizzbuzz()
