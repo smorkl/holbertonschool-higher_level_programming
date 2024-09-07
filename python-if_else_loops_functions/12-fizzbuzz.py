@@ -14,7 +14,3 @@ def fizzbuzz():
             resultado += "Buzz "
         else:
             resultado += str(numero) + " "
-
-    # Eliminamos el último espacio extra
-    resultado = resultado.rstrip()
-    print(resultado)
