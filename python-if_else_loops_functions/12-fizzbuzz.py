@@ -11,13 +11,6 @@ def fizzbuzz():
         elif numero % 3 == 0:
             print("Fizz", end=" ")
         elif numero % 5 == 0:
-            if numero != 100:
-                print("Buzz", end=" ")
-            else:
-                print("Buzz")        
+            print("Buzz", end=" ")
         else:
             print(f"{numero}", end=" ")
-
-                
-
-fizzbuzz()
