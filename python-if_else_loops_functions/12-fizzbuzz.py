@@ -18,6 +18,3 @@ def fizzbuzz():
     # Eliminamos el último espacio extra
     resultado = resultado.rstrip()
     print(resultado)
-
-# Llamamos a la función para ejecutar el código
-fizzbuzz()
