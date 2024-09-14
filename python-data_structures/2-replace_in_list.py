@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def replace_in_list(my_list, idx, element):
     """
     Replaces an element of a list at a specific position.
@@ -10,10 +11,11 @@ def replace_in_list(my_list, idx, element):
         element: The new element to insert.
 
     Returns:
-        The modified list, or None if the index is out of range.
+        The modified list, or return list origin.
     """
+
     if idx < 0 or idx >= len(my_list) + 1:
-        return "None"
+        return my_list
     else:
         my_list[idx] = element
         return my_list
