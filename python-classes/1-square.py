@@ -1,22 +1,12 @@
 #!/usr/bin/python3
-"""
-Represents a square.
-
-Attributes:
-    __size (int): The side length of the square.
-
-Args:
-    size (int): The initial side length of the square.
-"""
+""" square class """
 
 
-class Square:
+class Square():
+    """square"""
 
-    def __init__(self, size):
+    def __init__(self, size) -> None:
         """
-        Initializes a new Square object.
-
-        Args:
-            size (int): The side length of the square.
+            size of square
         """
         self.__size = size
