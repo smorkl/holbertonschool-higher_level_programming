@@ -1,43 +1,49 @@
 #!/usr/bin/python3
-"""Square Class
 
-square class
-
+"""
+this module defines the 'Square' class, which represents a square.
 """
 
 
 class Square:
-    """Square class representation with methods for area calculation."""
+    """
+    Represents a square.
 
-    def __init__(self, size=0):
+    Attributes:
+        __size (int): The side length of the square.
+
+    Args:
+        size (int, optional): The initial side length
+        of the square. Defaults to 0.
+    """
+
+    def __init__(self, size=0) -> None:
         """
         Initializes a new Square object.
 
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
+            size (int, optional): The initial side
+            length of the square. Must be a non-negative
+            integer. Defaults to 0.
 
         Raises:
-            TypeError: If the provided size is not an integer.
-            ValueError: If the provided size is less than zero.
+            TypeError: If `size` is not an integer.
+            ValueError: If `size` is negative.
         """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
+
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
 
-    @property
-    def size(self):
-        """
-        Returns the size of the square.
-        """
-        return self.__size
+        self.__size = size
 
     def area(self):
         """
         Calculates the area of the square.
 
         Returns:
-            float: The calculated area of the square.
+            int: The area of the square.
         """
-        return self.size ** 2  # Use the property for accessing size
+        return self.__size * self.__size
