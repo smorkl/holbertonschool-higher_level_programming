@@ -51,7 +51,7 @@ class Square:
     @size.setter
     def size(self, new_size):
         """pass"""
-        pass
+        self._size = new_size
 
     def area(self):
         """
@@ -60,4 +60,4 @@ class Square:
         Returns:
             int: The area of the square.
         """
-        return self.__size * self.__size
+        return self.size * self.size
