@@ -3,10 +3,10 @@
 Represents a square.
 
 Attributes:
-__size (int): The side length of the square.
+    __size (int): The side length of the square.
 
 Args:
-size (int): The initial side length of the square.
+    size (int): The initial side length of the square.
 """
 
 
