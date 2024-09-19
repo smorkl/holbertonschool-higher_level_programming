@@ -22,7 +22,8 @@ class Square:
 
         Args:
             size (int, optional): The initial side
-            length of the square. Must be a non-negative integer. Defaults to 0.
+            length of the square. Must be a non-negative
+            integer. Defaults to 0.
 
         Raises:
             TypeError: If `size` is not an integer.
