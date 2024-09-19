@@ -28,6 +28,7 @@ class Square:
 
     @size.setter
     def size(self, new_size):
+        """pass"""
         pass
 
     def area(self):
