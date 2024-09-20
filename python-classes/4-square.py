@@ -39,7 +39,7 @@ class Square:
         Returns:
             int: The size of the square.
         """
-        
+
         if not isinstance(self._size, int):
             raise TypeError("size must be an integer")
         if self._size < 0:
