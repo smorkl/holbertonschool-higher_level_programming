@@ -29,13 +29,6 @@ class Square:
             TypeError: If `size` is not an integer.
             ValueError: If `size` is negative.
         """
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
         self._size = size
 
     @property
@@ -46,6 +39,11 @@ class Square:
         Returns:
             int: The size of the square.
         """
+        
+        if not isinstance(self._size, int):
+            raise TypeError("size must be an integer")
+        if self._size < 0:
+            raise ValueError("size must be >= 0")
         return self._size
 
     @size.setter
