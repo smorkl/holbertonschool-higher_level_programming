@@ -29,10 +29,13 @@ class Square:
             raise ValueError("size must be >= 0")
         self._size = size  # Private attribute to store the square's size
 
-        if (isinstance(position, tuple) and len(position)) == 2 and \
-            isinstance(position[1], int) and \
-            isinstance(position[0], int) and position[0] >= 0 and \
-            position[1] >= 0:
+        if (
+            (isinstance(position, tuple) and len(position)) == 2
+            and isinstance(position[1], int)
+            and isinstance(position[0], int)
+            and position[0] >= 0
+            and position[1] >= 0
+        ):
             self._position = position
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -105,7 +108,7 @@ class Square:
         Returns:
             float: The calculated area of the square.
         """
-        return self.size ** 2  # Use the property to access the size
+        return self.size**2  # Use the property to access the size
 
     def my_print(self):
         """
@@ -121,7 +124,7 @@ class Square:
                 while rep < count2:
                     print()
                     rep += 1
-            char = '#'
+            char = "#"
             for row in range(self.size):
                 if self._position[0] > 0:
                     cout = self._position[0]
