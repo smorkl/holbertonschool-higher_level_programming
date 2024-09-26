@@ -1,6 +1,6 @@
 >>> import sys
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-#inicialization of class
+
 >>> bg = BaseGeometry()
 
 >>> BaseGeometry.integer_validator("name", "John", "hola")
