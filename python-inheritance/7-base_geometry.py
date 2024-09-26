@@ -1,19 +1,12 @@
 #!/usr/bin/python3
 """
-empty class
+this clas has 2 method define
 """
 
 
-class BaseGeometry():
+class BaseGeometry:
     """
     Base class for geometric shapes.
-
-    This class provides a foundation for defining various geometric shapes.
-    It includes a validation function for integer values and a placeholder
-    implementation of the `area()` method that raises an exception.
-
-    Properties:
-    - No properties are currently defined in the `BaseGeometry` class.
 
     Methods:
     - `integer_validator(self, name, value)`: Validates if the provided `value`
@@ -24,13 +17,16 @@ class BaseGeometry():
         in subclasses.
 
     Raises:
-    - `TypeError`: If `value` in `integer_validator` is not an integer.
-    - `ValueError`: If `value` in `integer_validator` is not strictly positive.
-    - `Exception`: If `area()` is called directly on the `BaseGeometry` class.
-
-    This class is intended to be subclassed to define specific geometric shapes
-    and their corresponding area calculation logic.
+    -TypeError`: If `value` in `integer_validator` is not an integer.
+    -ValueError`: If `value` in `integer_validator` is not strictly positive.
+    -Exception`: If `area()` is called directly on the `BaseGeometry` class.
     """
+
+    def area(self):
+        """
+        this fuctio returns an exception error
+        """
+        raise (Exception("area() is not implemented"))
 
     def integer_validator(self, name, value):
         """
@@ -43,10 +39,3 @@ class BaseGeometry():
             raise (TypeError(f"{name} must be an integer"))
         if value <= 0:
             raise (ValueError(f"{name} must be greater than 0"))
-
-    def area(self):
-        """
-        this fuctio returns an exception error
-        """
-        raise (Exception("area() is not implemented"))
-        pass
