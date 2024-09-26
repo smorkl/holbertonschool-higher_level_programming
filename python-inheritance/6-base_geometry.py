@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """
-empty class
+The class has a method called defined Area
 """
 
 
 class BaseGeometry():
     """
-    empty class BaseGeometry
+    defined area method
     """
     def area(self):
         """
         this fuctio returns an exception error
         """
         raise (Exception("area() is not implemented"))
-        pass
