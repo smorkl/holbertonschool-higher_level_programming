@@ -21,6 +21,8 @@ class BaseGeometry:
     -ValueError`: If `value` in `integer_validator` is not strictly positive.
     -Exception`: If `area()` is called directly on the `BaseGeometry` class.
     """
+    def __init__(self) -> None:
+        pass
 
     def area(self):
         """
