@@ -5,6 +5,18 @@
 >>> type(bg)
 <class '7-base_geometry.BaseGeometry'>
 
+>>> hasattr(BaseGeometry, 'area')
+True
+
+>>> hasattr(BaseGeometry, 'integer_validator')
+True
+
+>>> integer_validator(“age”)
+  File "<stdin>", line 1
+    integer_validator(“age”)
+                      ^
+SyntaxError: invalid character '“' (U+201C)
+
 >>> BaseGeometry.integer_validator("name", "John", "hola")
 Traceback (most recent call last):
     ...
