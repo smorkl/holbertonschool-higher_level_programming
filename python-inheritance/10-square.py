@@ -20,8 +20,7 @@ class Square(Rectangle):
         TypeError: If size is  not an integer.
         ValueError: If size is not strictly positive.
         """
-        super().__init__(self.integer_validator)
-        self.integer_validator("size", size)
+        super().__init__(self.integer_validator("size", size))
         self._size = size
 
     def area(self):
