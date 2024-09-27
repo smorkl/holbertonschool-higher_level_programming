@@ -46,8 +46,10 @@ Traceback (most recent call last):
   File "/usr/lib/python3.9/doctest.py", line 1336, in __run
     exec(compile(example.source, filename, "single",
   File "<doctest 7-base_geometry.txt[11]>", line 1, in <module>
-    integer_validator("age", {3, 4})
-NameError: name 'integer_validator' is not defined
+    bg.integer_validator("age", {3, 4})
+  File "/home/student_jail/student_repo/python-inheritance/7-base_geometry.py", line 41, in integer_validator
+    raise (TypeError(f"{name} must be an integer"))
+TypeError: age must be an integer
 
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
