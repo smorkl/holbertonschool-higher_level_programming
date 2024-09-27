@@ -2,10 +2,10 @@
 """
 square that inherits from rectangle
 """
-Rectangle = __import__('9-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class Square(Rectangle):
+class Square(BaseGeometry):
     """
     Represents a square with size attributes.
     """
@@ -20,9 +20,12 @@ class Square(Rectangle):
         TypeError: If size is  not an integer.
         ValueError: If size is not strictly positive.
         """
-        super().__init__(self.integer_validator("size", size))
+        self.integer_validator("size", size)
         self._size = size
 
     def area(self):
-        result = (self._size * 2)
+        result = (self._size ** 2)
         return result
+
+s = Square(4)
+print(s.area())
