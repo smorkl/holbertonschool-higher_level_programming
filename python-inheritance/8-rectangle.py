@@ -2,12 +2,14 @@
 """
 Rectangle that inherits from BaseGeometry 
 """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
 
 class Rectangle(BaseGeometry):
     """
     Representa un rectángulo con atributos de ancho y alto.
     """
+
     def __init__(self, width, height):
         """
         Inicializa un objeto Rectangle.
