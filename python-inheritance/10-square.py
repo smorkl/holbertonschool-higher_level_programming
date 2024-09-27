@@ -2,13 +2,14 @@
 """
 square that inherits from rectangle
 """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Square(BaseGeometry):
     """
     Represents a square with size attributes.
     """
+
     def __init__(self, size):
         """
         Initializes a square object.
@@ -24,8 +25,5 @@ class Square(BaseGeometry):
         self._size = size
 
     def area(self):
-        result = (self._size ** 2)
+        result = self._size**2
         return result
-
-s = Square(4)
-print(s.area())
