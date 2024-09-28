@@ -1,62 +1,42 @@
-#!/usr/bin/python3
-import math
-"""
-class of Animal
-"""
 from abc import ABC, abstractmethod
+import math
+
+def shape_info(arg):
+    area = arg.area()
+    perimeter = arg.perimeter()
+    print(f"Area: {area}\nPerimeter: {perimeter}")
 
 
-class Shape():
-    """
-    """
+class Shape(ABC):
+
     @abstractmethod
     def area(self):
-        raise (TypeError(""))
-    
+        pass
+
     @abstractmethod
     def perimeter(self):
-        raise (TypeError(""))
+        pass
 
 class Circle(Shape):
-    """
-    """
     def __init__(self, radius):
-        if radius < 0:
-            raise (AssertionError("Perimeter should handle negative radius"))
         self.radius = radius
-    
+
     def area(self):
-        return (math.pi * self.radius ** 2)
+        area = math.pi * self.radius**2
+        return area
     
     def perimeter(self):
-        perimeter = 2 * math.pi * self.radius
-        if perimeter < 0:
-            raise (AssertionError("Perimeter should handle negative radius"))
-        else:
-            return perimeter
-
-
+        perimeter =2 * math.pi * self.radius
+        return perimeter
+    
 class Rectangle(Shape):
-    """
-    """
+    
     def __init__(self, width, height):
-        if width < 0 and height < 0:
-            raise (AssertionError("Perimeter should handle negative radius"))
         self.width = width
         self.height = height
     
     def area(self):
-        return (self.width * self.height)
+        return self.width * self.height
     
     def perimeter(self):
-        perimeter = 2*(self.width + self.height)
-        return perimeter
-
-def shape_info(shape):
-    try:
-        area = shape.area()
-        perimeter = shape.perimeter()
-        print (f"Area: {area}")
-        print (f"Perimeter: {perimeter}")
-    except AttributeError:
-        print("El objeto no tiene métodos area o perimetro.")
+        return (self.width * 2) + (self.height * 2)
