@@ -25,7 +25,7 @@ class Circle(Shape):
         area = math.pi * self.radius**2
         return area
     def perimeter(self):
-        perimeter = 2 * math.pi * self.radius
+        perimeter = (2 * math.pi * self.radius)*-1
         return perimeter
 
 class Rectangle(Shape):
