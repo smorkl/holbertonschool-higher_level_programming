@@ -19,6 +19,8 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
+        if radius < 0:
+            raise AssertionError ("Perimeter should handle negative radius")
         self.radius = radius
 
     def area(self):
@@ -39,9 +41,3 @@ class Rectangle(Shape):
     
     def perimeter(self):
         return (self.width * 2) + (self.height * 2)
-
-circle = Circle(radius=-5)
-rectangle = Rectangle(width=4, height=7)
-
-shape_info(circle)
-shape_info(rectangle)
