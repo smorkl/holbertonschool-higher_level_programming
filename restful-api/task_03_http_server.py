@@ -34,7 +34,7 @@ class Simpleseerver(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode())
             return
         
-        else :
+        else:
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
