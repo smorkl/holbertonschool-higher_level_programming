@@ -38,7 +38,7 @@ class Simpleseerver(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"404 Not Found")
+            self.wfile.write(b'Endpoint not found')
             return
             
 def run(server_class=HTTPServer, handler_class=Simpleseerver, port=8000):
