@@ -1,13 +1,17 @@
 from flask import Flask, jsonify, request
-import json
-
+from collections import OrderedDict
 
 app = Flask(__name__)
 
-users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"},
-        "Richar": {"name": "Richar", "age": 25, "city": "Los Angeles"},
-        "Stuar": {"name": "Stuar", "age": 27, "city": "Neyork"},
-        "Candas": {"name": "Candas", "age": 20, "city": "Kansas"}}
+users = {"jane": {"age": 28, "city": "Los Angeles", "username": "jane", "name": "Jane"},
+         "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}}
+
+class User:
+    def __init__(self, username, user_info):
+        self.username = username
+        self.name = user_info['name']
+        self.age = user_info['age']
+        self.city = user_info['city']
 
 @app.route("/")
 def home():
@@ -46,13 +50,14 @@ def add_user():
     Returns a 201 Created response with the added user information.
     """
     user_data = request.get_json()
-    username = user_data.get("username")
-    
+    username = user_data['username']
+    user_info = user_data['user_info']
+
+    new_user = User(username, user_info)
     if not username:
-        return jsonify({"error": "Username is required"}), 400
-    users[username] = user_data
+        return jsonify({'error': 'Username is required'}), 400
     
-    return jsonify({"message": "User added", "user": user_data}), 201
+    return jsonify({'message': 'User added', 'user': new_user.__dict__}), 201
 
 if __name__ == "__main__":
     app.run(debug=True)
