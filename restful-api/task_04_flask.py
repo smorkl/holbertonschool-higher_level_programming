@@ -1,17 +1,9 @@
-from flask import Flask, jsonify, request
-from collections import OrderedDict
+
+from flask import Flask,  request, jsonify
 
 app = Flask(__name__)
 
-users = {"jane": {"age": 28, "city": "Los Angeles", "username": "jane", "name": "Jane"},
-         "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}}
-
-class User:
-    def __init__(self, username, user_info):
-        self.username = username
-        self.name = user_info['name']
-        self.age = user_info['age']
-        self.city = user_info['city']
+users = {}
 
 @app.route("/")
 def home():
@@ -43,21 +35,12 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    """
-    Adds a new user to the internal user data store based on the POST request data.
-
-    Returns a 400 error if the username is missing or invalid.
-    Returns a 201 Created response with the added user information.
-    """
-    user_data = request.get_json()
-    username = user_data['username']
-    user_info = user_data['user_info']
-
-    new_user = User(username, user_info)
+    user_add = request.get_json()
+    username = user_add.get('username')
     if not username:
-        return jsonify({'error': 'Username is required'}), 400
-    
-    return jsonify({'message': 'User added', 'user': new_user.__dict__}), 201
+        return jsonify({"error": "Username is required"}), 400
+    users[username] = user_add
+    return jsonify({"message": "User added", "user": user_add}), 201
 
 if __name__ == "__main__":
     app.run(debug=True)
