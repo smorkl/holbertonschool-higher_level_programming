@@ -11,14 +11,14 @@ def print_matrix_integer(matrix=[[]]):
     """
     if not matrix:
         return 
-
-    for row in matrix:
-        counter = 0
-        for i, element in enumerate(row):
-            if i < len(row) - 1:
-                print("{:d}".format(element), end=" ")
-            else:
-                print("{:d}".format(element), end="\n")
-            if counter == 3:
-                counter = 0
-                print()
+    else:
+        for row in matrix:
+            counter = 0
+            for i, element in enumerate(row):
+                if i < len(row) - 1:
+                    print("{:d}".format(element), end=" ")
+                else:
+                    print("{:d}".format(element), end="\n")
+                if counter == 3:
+                    counter = 0
+                    print()
