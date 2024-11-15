@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def print_matrix_integer(matrix=[[]]):
     """
     Prints each row of a 2D integer matrix
@@ -10,7 +11,7 @@ def print_matrix_integer(matrix=[[]]):
         defaults to an empty list).
     """
     if not matrix:
-        return 
+        return
     else:
         for row in matrix:
             counter = 0
