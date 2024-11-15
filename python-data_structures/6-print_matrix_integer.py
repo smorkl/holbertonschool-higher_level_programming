@@ -20,3 +20,4 @@ def print_matrix_integer(matrix=[[]]):
             if counter == 3:
                 counter = 0
                 print()
+    return
