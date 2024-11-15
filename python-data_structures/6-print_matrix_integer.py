@@ -11,7 +11,7 @@ def print_matrix_integer(matrix=[[]]):
         defaults to an empty list).
     """
     if not matrix:
-        return
+        print()
     else:
         for row in matrix:
             counter = 0
