@@ -9,6 +9,8 @@ def print_matrix_integer(matrix=[[]]):
         matrix: A 2D list of integers (optional,
         defaults to an empty list).
     """
+    if not matrix:
+        return 
 
     for row in matrix:
         counter = 0
@@ -20,4 +22,3 @@ def print_matrix_integer(matrix=[[]]):
             if counter == 3:
                 counter = 0
                 print()
-    return matrix
