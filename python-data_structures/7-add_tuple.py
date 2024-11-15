@@ -19,5 +19,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
     elif len(tuple_a) == 0 and len(tuple_b) == 0:
         tupla_c = (0, 0)
         return tupla_c
-    else:
-        return tupla_c == (0, 0)
