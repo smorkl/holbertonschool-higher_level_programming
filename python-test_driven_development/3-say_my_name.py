@@ -3,6 +3,7 @@
 say my name
 """
 
+
 def say_my_name(first_name, last_name=""):
     """Prints a square of '#' characters of the given size.
 
@@ -13,7 +14,7 @@ def say_my_name(first_name, last_name=""):
         TypeError: If `firt_name` is not string
         TypeError: If `last_name` is not sting.
     """
-    if not isinstance(first_name, (str)): 
+    if not isinstance(first_name, (str)):
         raise TypeError("first_name must be a string")
     elif not isinstance(last_name, (str)):
         raise TypeError("last_name must be a string")
