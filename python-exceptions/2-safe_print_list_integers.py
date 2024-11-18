@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 def safe_print_list_integers(my_list=[], x=0):
+    count = 0
     for i in my_list:
         try:
-            count = 0
             element = i
             if i <= x:
                 if int(element):
@@ -15,3 +15,5 @@ def safe_print_list_integers(my_list=[], x=0):
             pass
     print()
     return count
+
+caso = safe_print_list_integers(my_list=[1, 2, 3, 4], x = 4)
