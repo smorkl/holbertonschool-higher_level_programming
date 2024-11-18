@@ -15,5 +15,3 @@ def safe_print_list_integers(my_list=[], x=0):
             pass
     print()
     return count
-
-caso = safe_print_list_integers(my_list=[1, 2, 3, 4], x = 4)
