@@ -18,7 +18,7 @@ def text_indentation(text):
 
     listchar = [".", "?", ":"]
     for char in text:
-        print(char, end=" ")
+        print(char, end="")
         for i in listchar:
             if char == i:
                 print()
