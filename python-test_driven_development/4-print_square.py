@@ -3,6 +3,7 @@
 print square
 """
 
+
 def print_square(size):
     """Prints a square of '#' characters of the given size.
 
@@ -21,4 +22,3 @@ def print_square(size):
 
     for _ in range(size):
         print("#" * size)
-        
