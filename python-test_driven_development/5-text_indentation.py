@@ -3,6 +3,7 @@
 text identation
 """
 
+
 def text_indentation(text):
     """prints a text if it finds one of these chars it makes a line break.
 
