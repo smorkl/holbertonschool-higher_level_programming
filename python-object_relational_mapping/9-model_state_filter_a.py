@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all State objects that contain the letter a from the database
-Using module SQLAlchemy
+Script that lists all State objects that
+contain the letter a from the database
 """
 
 from model_state import Base, State
@@ -12,7 +12,8 @@ from sys import argv
 if __name__ == "__main__":
     # create an engine
     engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]),
+        "mysql+mysqldb://{}:{}@localhost/{}"
+        .format(argv[1], argv[2], argv[3]),
         pool_pre_ping=True,
     )
     # create a configured "Session" class
@@ -22,7 +23,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     s_tate = (
-        session.query(State).filter(State.name.like("%a%")).order_by(State.id).all()
+        session.query(State).filter(State.name.like("%a%"))
+        .order_by(State.id).all()
     )
     for state in s_tate:
         print("{}: {}".format(state.id, state.name))
