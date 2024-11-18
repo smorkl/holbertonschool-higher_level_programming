@@ -21,4 +21,4 @@ def text_indentation(text):
         print(char, end="")
         for i in listchar:
             if char == i:
-                print()
+                print(end="")
