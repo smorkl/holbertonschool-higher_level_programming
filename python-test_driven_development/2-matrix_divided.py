@@ -36,7 +36,7 @@ def matrix_divided(matrix, div):
             element = row[col]
             if not (isinstance(element, int) or isinstance(element, float)):
                 raise TypeError(
-                    "Matrix must contain only integers or floats. Found a string element."
+                    "matrix must be a matrix (list of lists) of integers/floats"
                 )
             new_row.append(
                 round((element / div), 2)
