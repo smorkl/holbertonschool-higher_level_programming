@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 """
-d
+say my name
 """
 
 def say_my_name(first_name, last_name=""):
-    """
-    dd
+    """Prints a square of '#' characters of the given size.
+
+    Args:
+        first_name: the name of the person.
+        last_name: the last name of the person.
+    Raises:
+        TypeError: If `firt_name` is not string
+        TypeError: If `last_name` is not sting.
     """
     if not isinstance(first_name, (str)): 
         raise TypeError("first_name must be a string")
