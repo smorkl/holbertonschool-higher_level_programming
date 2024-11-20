@@ -53,7 +53,7 @@ First import
         ...
     TypeError: div must be a number
 
-    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix = [[0], [0]]
     >>> matrix_divided(matrix, 0)
     Traceback (most recent call last):
         ...
