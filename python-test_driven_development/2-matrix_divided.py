@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
-Divides a matrix by a number. Handles type checking and row length consistency.
+Divides a matrix by a number. Handles type checking
+ and row length consistency.
 """
 
 
 def matrix_divided(matrix, div):
-    """Divides all elements in a matrix by a number. Handles type checking and row length consistency.
+    """Divides all elements in a matrix by a number. Handles
+      type checking and row length consistency.
 
     Args:
         matrix (list of lists): A 2D list representing the matrix.
@@ -17,7 +19,8 @@ def matrix_divided(matrix, div):
             different lengths.
 
     Raises:
-        TypeError: If div is zero, of an invalid type, or the matrix contains a string element.
+        TypeError: If div is zero, of an invalid type, or the matrix
+        contains a string element.
     """
 
     if not isinstance(div, (int, float)):
