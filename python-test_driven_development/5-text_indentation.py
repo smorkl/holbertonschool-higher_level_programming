@@ -27,5 +27,5 @@ def text_indentation(text):
                 ministring = ""
     
     if ministring:
-        ministring = ministring.rtrip()
+        ministring = ministring.strip()
         print(ministring)
