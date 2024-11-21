@@ -17,8 +17,11 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     listchar = [".", "?", ":"]
+    ministring = ""
     for char in text:
-        print(char, end="")
+        ministring += char
         for i in listchar:
             if char == i:
-                print("\n\n", end="")
+                ministring = ministring.lstrip()
+                print(ministring)
+                ministring = ""
