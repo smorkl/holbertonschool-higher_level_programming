@@ -25,3 +25,4 @@ def text_indentation(text):
                 ministring = ministring.lstrip()
                 print(ministring)
                 ministring = ""
+    print(text)
