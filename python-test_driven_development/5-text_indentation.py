@@ -20,7 +20,7 @@ def text_indentation(text):
     for char in text:
         ministring += char
         if char in ".?:":
-            print(ministring, end="\n")
+            print(ministring, end="")
             ministring = ""
 
     if ministring:
