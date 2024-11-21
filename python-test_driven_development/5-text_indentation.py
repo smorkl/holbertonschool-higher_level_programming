@@ -24,4 +24,4 @@ def text_indentation(text):
             ministring = ""
 
     if ministring:
-        print(ministring)
+        print(ministring, end="")
