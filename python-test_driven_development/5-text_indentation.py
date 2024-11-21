@@ -16,16 +16,13 @@ def text_indentation(text):
     if not isinstance(text, (str)):
         raise TypeError("text must be a string")
 
-    listchar = [".", "?", ":"]
     ministring = ""
     for char in text:
         ministring += char
-        for i in listchar:
-            if char == i:
-                ministring = ministring.lstrip()
-                print(ministring)
-                ministring = ""
-    
+        if char in ".?:":
+            print(ministring.strip())
+            ministring = ""
+
+
     if ministring:
-        ministring = ministring.strip()
-        print(ministring)
+        print(ministring.strip())
