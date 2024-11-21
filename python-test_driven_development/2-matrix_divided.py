@@ -23,7 +23,11 @@ def matrix_divided(matrix, div):
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
-        raise TypeError("division by zero")
+        raise ZeroDivisionError("division by zero")
+    for fila in matrix:
+        for elemento in fila:
+            if elemento == 0:
+                raise ZeroDivisionError("division by zero")
     new_matrix = []
     first_row_length = len(matrix[0])  # Store length of the first row
 
