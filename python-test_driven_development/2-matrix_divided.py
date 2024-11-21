@@ -15,8 +15,8 @@ def matrix_divided(matrix, div):
 
     Returns:
         list of lists: A new matrix with elements divided by div.
-        None: If any element in the matrix is not an int or float, or if rows have
-            different lengths.
+        None: If any element in the matrix is not an
+        int or float, or if rows have different lengths.
 
     Raises:
         TypeError: If div is zero, of an invalid type, or the matrix
@@ -43,7 +43,8 @@ def matrix_divided(matrix, div):
             element = row[col]
             if not (isinstance(element, int) or isinstance(element, float)):
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
+                    "matrix must be a matrix\
+                      (list of lists) of integers/floats"
                 )
             new_row.append(
                 round((element / div), 2)
