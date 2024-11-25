@@ -29,8 +29,11 @@ def roman_to_int(roman_string):
         if value > prev_value:
             result -= value
         else:
-            result += value
+            result -= value
 
-        prev_value = value
+        prev_value = value 
+        
+    if result < 0:
+        result =  result * -1 
 
-    return result * -1
+    return result
