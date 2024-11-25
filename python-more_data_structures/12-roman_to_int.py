@@ -1,8 +1,13 @@
-#!/usr/bin/python3
-
 def roman_to_int(roman_string):
-    if not isinstance(roman_string, str) or not roman_string:
-        return 0  # Handle non-string or empty input
+    """Converts a Roman numeral string to an integer.
+
+    Args:
+        roman_string: The Roman numeral string to convert.
+
+    Returns:
+        The integer value of the Roman numeral string.
+        Returns 0 for invalid input.
+    """
 
     roman_dict = {
         'I': 1,
@@ -14,18 +19,17 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    num = 0
+    result = 0
     prev_value = 0
 
-    for char in roman_string[::-1]:
+    for char in reversed(roman_string):
         value = roman_dict.get(char, 0)
 
-        if value < prev_value and prev_value not in (10, 100, 1000):
-            return 0
-        elif value <= prev_value:
-            num += value
+        if value > prev_value:
+            result -= value
         else:
-            num -= value
+            result += value
+
         prev_value = value
 
-    return 1
+    return result
