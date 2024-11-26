@@ -26,5 +26,11 @@
             {% endfor %}
         </tbody>
     </table>
+    {% if error_message %}
+        <p>Error: {{ error_message }}</p>
+    {% else %}
+        <table>
+            </table>
+    {% endif %}
 </body>
 </html>
