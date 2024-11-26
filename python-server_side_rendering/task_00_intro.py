@@ -25,8 +25,7 @@ def generate_invitations(template, attendees):
 
   for i, attendee in enumerate(attendees):
     # Replace placeholders with attendee data
-    processed_template = template.format(**attendee, **{"event_date": attendee.get("event_date", "N/A")})
-
+    processed_template = template.format(**attendee, **{"event_location": attendee.get("event_location", "Ubicación no especificada")})
     output_filename = f"output_{i+1}.txt"
 
     if os.path.exists(output_filename):
