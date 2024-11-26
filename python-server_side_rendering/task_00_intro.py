@@ -39,6 +39,3 @@ def generate_invitations(template, attendees):
       print(f"Invitation for {attendee['name']} generated successfully!")
     except Exception as e:
       print(f"Error writing to file {output_filename}: {e}")
-
-with open('template.txt', 'r') as file:
-  template_content = file.read()
