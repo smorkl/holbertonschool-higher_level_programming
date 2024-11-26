@@ -18,7 +18,9 @@ def contact():
 @app.route('/items')
 def show_items():
     with open('items.json', 'r') as f:
-        items = json.load(f)
+        data = json.load(f)
+        items = data['items']  # Extraer la lista de items del diccionario
+
     return render_template('items.html', items=items)
 
 if __name__ == '__main__':
