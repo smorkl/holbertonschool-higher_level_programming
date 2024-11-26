@@ -2,6 +2,8 @@
 """
 triangule
 """
+
+
 def pascal_triangle(n):
     """
     Generates a Pascal's triangle of `n` rows.
